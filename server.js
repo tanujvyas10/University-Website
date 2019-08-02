@@ -295,9 +295,10 @@ app.get('/enquiry', checkLoggedIn, (req, res)=>{
   })
 })
 
+const port=process.env.PORT
 
 db.sync().then(() => {
-  server.listen(8787, () => {
+  server.listen(port, () => {
     console.log('Server started on http://localhost:8787/login')
   })
 })
