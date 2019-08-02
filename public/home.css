@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* font-family: 'luna'; */
+}
+header{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0vw 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+header h1{
+    margin-top: -100px;
+}
+header::before{
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(univ.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+header *{
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+    
+a:visited {
+    color: black;
+}
+/*     
+    a:focus {
+    color: white;
+    }
+    
+    a:hover {
+    color: black;
+    }
+    
+    a:active {
+    color: purple;
+    } */
+
+
+ul{
+    background-color: #fff;
+    width: 100hw;
+    /* font-size: 1.5em; */
+    position: sticky;
+    top: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-size: 2em; */
+    box-shadow: 5px 5px 5px 5px gray;
+    border-bottom: 10px;
+}
+li{
+    display: inline-block;
+    padding: 25px;
+}
+li:hover{
+    background-color: rgb(219, 219, 219);
+    padding: 24px;
+}
+#login{
+    background-color: rgb(0, 0, 153);
+    color: azure;
+    padding: 10px;
+}
+#login:hover{
+    background-color: blueviolet;
+}
+
+#home{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    position: relative;
+    background-color: #fff;
+    text-align: justify;
+}
+
+#content{
+    padding: 30px;
+    background-color: #ffefee;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

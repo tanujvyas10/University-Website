@@ -1,0 +1,51 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div id="container">
+  <h1>Login</h1>
+  <h3>Admin <span>🔽</span></h3>
+  <form style="display: none" action="/login" method="POST">
+    <input name="username" placeholder="fullname">
+    <br><input name="password" type="password" placeholder="password">
+    <br><button type="submit">Login</button>
+  </form>
+  <hr>
+  <h3>User <span>🔽</span></h3>
+  <form action="/login" method="POST">
+    <input name="username" placeholder="fullname">
+    <br><input name="password" type="password" placeholder="password">
+    <br><button type="submit">Login</button>
+  </form>
+  </div>
+
+  <script>
+    let headings=document.getElementsByTagName('span')
+    let forms=document.getElementsByTagName('form')
+    let acount=0
+    let ucount=0
+    headings[0].addEventListener('click', ()=>{
+      if(acount%2 == 0)
+        forms[0].style.display='block'
+      else
+        forms[0].style.display='none'
+      acount++
+    })
+    headings[1].addEventListener('click', ()=>{
+      if(ucount%2 == 0)
+        forms[1].style.display='none'
+      else
+        forms[1].style.display='block'
+      ucount++
+    })
+  </script>
+</body>
+</html>

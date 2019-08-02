@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    {{#if info.name}}
+
+    <div id="header">
+    <a href="/home">home></a> &nbsp;&nbsp;<a href="/logout">Logout</a>
+    </div>
+
+    <h3>{{info.name}}</h3>
+
+    <div class="chat">
+    <h1>Personal Details:</h1>
+    <hr>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>{{info.name}}</td>
+        </tr>
+        <tr>
+            <th>e-mail:</th>
+            <td>{{info.email}}</td>
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td>{{info.phone}}</td>
+        </tr>
+        <tr>
+            <th>Date of Birth:</th>
+            <td>{{info.dob}}</td>
+        </tr>
+        <tr>
+            <th>Place of Birth:</th>
+            <td>{{info.pob}}</td>
+        </tr>
+        <tr>
+            <th>Gender:</th>
+            <td>{{info.gender}}</td>
+        </tr>
+        <tr>
+            <th>Father's Name:</th>
+            <td>{{info.fathername}}</td>
+        </tr>
+        <tr>
+            <th>Mother's Name:</th>
+            <td>{{info.mothername}}</td>
+        </tr>
+        <tr>
+            <th>Parmanent Address:</th>
+            <td>{{info.paddress}}</td>
+        </tr>
+        <tr>
+            <th>Temporary Address:</th>
+            <td>{{info.taddress}}</td>
+        </tr>
+        <tr>
+            <th>Nationality:</th>
+            <td>{{info.nationality}}</td>
+        </tr>
+        <tr>
+            <th>Course Studying:</th>
+            <td>{{info.course}}</td>
+        </tr>
+        <p>For editing any detail leave a message in the <a id="link" href="/enquiry">enquiry</a> section in homepage</p>
+    </table>
+    </div>
+
+    {{else}}
+
+    <div id="header">
+    <a href="/home">home></a> &nbsp;&nbsp;<a href="/logout">Logout</a>&nbsp;&nbsp;<a href="userinput.html">Add details</a>
+    </div>
+    <p>Details once filled will be final. For any changes leave a message at <a id="link" href="/enquiry">enquiry</a> section in homepage</p>
+    
+    {{/if}}
+    
+    
+    
+
+
+</body>
+</html>

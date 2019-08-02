@@ -1,0 +1,46 @@
+#nav{
+    background-color: teal;
+    color: aliceblue;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+}
+body{
+    margin: 0px;
+    background-color: aliceblue;
+}
+table{
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 10px 10px 50px gray;
+}
+td{
+    padding: 25px;
+}
+.mx{
+    padding: 10px;
+}
+.mx:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+th{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: teal;
+}
+#foot{
+    box-shadow: 10px 10px 50px gray;
+    margin: 100px;
+    padding: 50px;
+}
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: teal;
+    padding: 10px;
+    font-size: 25px;
+    color: aliceblue;
+}
+button:hover{
+    transform: scale(1.5);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="header">
+        <a href="/home">Home></a>
+    </div>
+
+    {{#if isAdmin}}
+    
+    <div id="left">
+        <h3 id="user">{{current_user}}</h3>
+        
+        <div class="chat">
+            <h1>Chat Enquiry</h1>
+            <input type="text" id="to" placeholder="to">
+            <input type="text" id="chatinput" placeholder="msg"> <button id="chatbtn">Send</button>
+        </div>
+        <br>
+        <div class="chat">
+            <h1 id="details">Details:</h1>
+        </div>
+
+        <div id="right">
+            <ul id="chatList" style="display: none"></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="adchat.js"></script>
+    <link rel="stylesheet" href="adchat.css">
+
+    {{else}}
+
+    <div id="left">
+        <h3 id="user">{{current_user}}</h3>
+        <div class="chat">
+            <h1>Chat Enquiry</h1>
+            <input type="text" id="chatinput"> <button id="chatbtn">Send</button>
+        </div>
+        <br>
+
+        <div id="right">
+            <ul id="chatList">
+                {{#each msgs as |m|}}
+                <li>{{m.from}}: {{m.msg}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+    <link rel="stylesheet" href="adchat.css">
+
+    {{/if}}
+</body>
+</html>

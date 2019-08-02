@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="userinput.css">
+</head>
+<body>
+    <div id="nav">
+    <h1>University School of Technology<img src="logo.jpg" alt="logo" width="100" align="right"></h1>
+    <h3>Enter student information below</h3> <hr>
+    <marquee>admissions open for 2019 batch</marquee>
+    </div>
+    <br> <br> <br><br>
+    <form action="/userinput" method="POST">
+    <table>
+        <tr>
+            <th align="left">Name:</th>
+            <td><input name="fname" class="mx" type="text" placeholder="First name" required></td>
+            <td><input name="lname" class="mx" type="text" placeholder="Last name" required></td>
+        </tr>
+        <tr>
+            <th align="left">Date of Birth:</th>
+            <td><input name="dob" class="mx" type="date" required></td>
+        </tr>
+        <tr>
+            <th align="left">Place of Birth:</th>
+            <td><input name="pob" class="mx" type="text" required></td>
+        </tr>     
+        <tr>
+            <th align="left">Gender:</th>
+            <td><input class="mx" name="gender" value="Male" type="radio" required> Male </td>
+            <td><input class="mx" name="gender" value="Female" type="radio"> Female</td>
+            <td><input class="mx" name="gender" value="Other" type="radio"> Other</td>
+        </tr>
+        <tr>
+            <th align="left">Father's Name:</th>
+            <td><input name="fathername" class="mx" type="text" required></td>
+        </tr>
+        <tr>
+            <th align="left">Mother's Name:</th>
+            <td><input name="mothername" class="mx" type="text" required></td>
+        </tr>
+        <tr>
+            <th align="left">Parmanent Address:</th>
+            <td><textarea name="padd" class="mx" cols="20" rows="1" required></textarea></td>
+        </tr>
+        <tr>
+            <th align="left">Temporary Address:</th>
+            <td><textarea name="tadd" class="mx" cols="20" rows="1"></textarea></td>
+        </tr>
+        <tr>
+            <th align="left">Nationality:</th>
+            <td><input name="nationality" class="mx" type="text" required></td>
+        </tr>   
+        <tr>
+            <th align="left">Contact Information:</th>
+        </tr>
+        <tr>
+            <td align="left">e-mail <input name="email" class="mx" type="email" required></td>
+            <td align="left">Phone No. <input name="phone" class="mx" type="tel" minlength="8" maxlength="10" required></td>
+        </tr>
+
+        <tr>
+            <th align="left">Course Applying for:</th>
+            <td>
+                <select name="course" class="mx">
+                    <option>Btech CSE</option>
+                    <option>Btech IT</option>
+                    <option>Btech ECE</option>
+                    <option>Btech EEE</option>
+                    <option>Mtech CSE</option>
+                    <option>Btech ECE</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                    <option>BArch</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th align="left">Previous Education:</th>
+        </tr>
+        <tr>
+            <!-- step for decimal acceptence -->
+            <td align="left">Class X %/cgpa</td>
+            <td><input class="mx" type="number" required step="0.1"></td>
+            <td align="left">Class XII %</td>
+            <td><input class="mx" type="number" required step="0.01"></td>
+        </tr>
+        <!-- <tr>
+            <th align="left">Documents to be attached:</th>
+        </tr>
+        <tr>
+            <td>Passport size photograph:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Class X marksheet:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Class XII marksheet:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Migration Certificate:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Any relevant certificates:</td>
+            <td><input class="mx" type="file" accept="image/jpeg"></td>
+            <td><input class="mx" type="file" accept="image/jpeg"></td>
+        </tr> -->
+    </table>
+    <div id="foot">
+    <p>
+        <i> <input class="mx" type="checkbox" required> I certify that the above information is correct to the best of my knowledge. I promise to abide by the rules and regulations of the Institute.</i> 
+    </p>
+    <button>Submit</button>
+    </div>
+    </form>
+</body>
+</html>

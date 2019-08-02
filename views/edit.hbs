@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit {{name}}</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    {{!-- <form action="/editdb" method="POST">
+        <h1>Enter the detail name and new detail to be added for {{name}}: </h1>
+        <input type="text" name="detname" id="det-name" placeholder="detail name">
+        <input type="text" name="detvalue" id="det-value" placeholder="detail entry">
+        <button type="submit">Edit</button>
+    </form> --}}
+
+    <div id="header">
+        <a href="/home">home></a>
+    </div>
+
+    <h1 id="name">{{body.name}}</h1>
+
+
+
+    <form action="/editdb" method="post">
+    <table>
+        <tr style="display: none">
+            <th align="left">Name:</th>
+            <td><input id="iname" name="name" type="text" required></td>
+        </tr>
+        <tr>
+            <th align="left">Date of Birth:</th>
+            <td><input id="dob" name="dob" class="mx" type="date" required></td>
+        </tr>
+        <tr>
+            <th align="left">Place of Birth:</th>
+            <td><input id="pob" name="pob" class="mx" type="text" required></td>
+        </tr>     
+        <tr>
+            <th align="left">Gender:</th>
+            <td><input class="mx" name="gender" value="Male" type="radio" required> Male </td>
+            <td><input class="mx" name="gender" value="Female" type="radio"> Female</td>
+            <td><input class="mx" name="gender" value="Other" type="radio"> Other</td>
+        </tr>
+        <tr>
+            <th align="left">Father's Name:</th>
+            <td><input id="fathername" name="fathername" class="mx" type="text" required></td>
+        </tr>
+        <tr>
+            <th align="left">Mother's Name:</th>
+            <td><input id="mothername" name="mothername" class="mx" type="text" required></td>
+        </tr>
+        <tr>
+            <th align="left">Parmanent Address:</th>
+            <td><textarea rows="6" id="paddress" name="padd" class="mx" cols="20" rows="1" required></textarea></td>
+        </tr>
+        <tr>
+            <th align="left">Temporary Address:</th>
+            <td><textarea rows="6" id="taddress" name="tadd" class="mx" cols="20" rows="1"></textarea></td>
+        </tr>
+        <tr>
+            <th align="left">Nationality:</th>
+            <td><input id="nationality" name="nationality" class="mx" type="text" required></td>
+        </tr>   
+        <tr>
+            <th align="left">Phone:</th>
+            <td style="display: none" align="left">e-mail <input id="email" name="email" class="mx" type="email" required></td>
+            <td align="left"><input id="phone" name="phone" class="mx" type="tel" minlength="8" maxlength="10" required></td>
+        </tr>
+
+        <tr>
+            <th align="left">Course Applying for:</th>
+            <td>
+                <select name="course" class="mx">
+                    <option>Btech CSE</option>
+                    <option>Btech IT</option>
+                    <option>Btech ECE</option>
+                    <option>Btech EEE</option>
+                    <option>Mtech CSE</option>
+                    <option>Btech ECE</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                    <option>BArch</option>
+                </select>
+            </td>
+        </tr>
+        {{!-- <tr>
+            <th align="left">Previous Education:</th>
+        </tr> --}}
+        {{!-- <tr>
+            <!-- step for decimal acceptence -->
+            <td align="left">Class X %/cgpa</td>
+            <td><input id="X" class="mx" type="number" required step="0.1"></td>
+            <td align="left">Class XII %</td>
+            <td><input id="XII" class="mx" type="number" required step="0.01"></td>
+        </tr> --}}
+        <!-- <tr>
+            <th align="left">Documents to be attached:</th>
+        </tr>
+        <tr>
+            <td>Passport size photograph:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Class X marksheet:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Class XII marksheet:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Migration Certificate:</td>
+            <td><input class="mx" type="file" accept="image/jpeg" required></td>
+        </tr>
+        <tr>
+            <td>Any relevant certificates:</td>
+            <td><input class="mx" type="file" accept="image/jpeg"></td>
+            <td><input class="mx" type="file" accept="image/jpeg"></td>
+        </tr> -->
+    </table>
+    {{!-- <div id="foot"> --}}
+    {{!-- <p>
+        <i> <input class="mx" type="checkbox" required> I certify that the above information is correct to the best of my knowledge. I promise to abide by the rules and regulations of the Institute.</i> 
+    </p> --}}
+    <br>
+    <button>Submit</button>
+    {{!-- </div> --}}
+    </form>
+
+
+    <p id="details"></p>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="editdb.js"></script>
+    {{!-- <script>
+        const x=$('#name').innerText
+        console.log(x)
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get("name");
+        console.log(name)
+    </script> --}}
+</body>
+</html>
