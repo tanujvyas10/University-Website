@@ -64,10 +64,16 @@ app.get('/home', (req, res) => {
 
 app.get('/signup', (req, res) => res.render('signup'))
 app.post('/signup', (req, res) => {
+ var password;
+  if(req.body.password1==req.body.password2){
+      password=req.body.password
+
+      
   Users.create({
+   
     username: req.body.username,
     email: req.body.email,
-    password: req.body.password,
+        password: password,
     isAdmin: false
   })
     .then((user) => {
@@ -78,6 +84,10 @@ app.post('/signup', (req, res) => {
       console.error(err)
       res.redirect('/signup')
     })
+  }
+  else{
+    res.send("Password Donot match")
+  }
 })
 
 app.get('/login', (req, res) => {
